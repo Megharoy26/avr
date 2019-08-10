@@ -1,0 +1,34 @@
+#include<avr/io.h>
+#include<util/delay.h>
+
+int main(void)
+{
+	DDRC = 0XFF;
+while(1)   //infinite loop
+
+{
+
+PORTC = 0x05; // motor rotation in clockwise direction
+
+_delay_ms(3000);    //delay of 3 sec
+
+ 
+
+PORTC = 0x00;// motor stopped
+
+_delay_ms(1000);    //delay of 1 sec
+
+ 
+
+PORTC = 0x0A; //motor rotation in anticlockwise direction
+
+_delay_ms(3000);    //delay of 3 sec
+
+ 
+
+PORTC = 0x00;// motor stopped
+
+_delay_ms(1000);    //delay of 1 sec
+}
+}
+
