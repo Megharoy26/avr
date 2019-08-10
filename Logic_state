@@ -1,0 +1,18 @@
+#include<avr/io.h>
+#include<util/delay.h>
+int main()
+{
+DDRC = 0XFF;
+DDRA = 0XFE;
+while(1)
+{
+if(PINA == 0)
+{
+PORTC = 0X01;
+}
+else
+{
+PORTC = 0X00;
+}
+}
+}
